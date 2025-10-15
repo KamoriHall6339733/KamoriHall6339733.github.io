@@ -1,3 +1,5 @@
+const { createRef } = require("react");
+
 $(function () {
   // initialize canvas and context when able to
   canvas = document.getElementById("canvas");
@@ -17,7 +19,7 @@ $(function () {
     }
 
     // Create walls - do not delete or modify this code
-    createPlatform(-50, -50, canvas.width + 100, 50); // top wall
+    createPlatform(-45, -50, canvas.width + 100, 50); // top wall
     createPlatform(-50, canvas.height - 10, canvas.width + 100, 200, "navy"); // bottom wall
     createPlatform(-50, -50, 50, canvas.height + 500); // left wall
     createPlatform(canvas.width, -50, 50, canvas.height + 100); // right wall
@@ -27,14 +29,15 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    // toggleGrid();
+     toggleGrid();
 
 
     // TODO 2 - Create Platforms
-
-
-
-
+createPlatform(200, 620, 400, 20)
+createPlatform(700, 500, 350, 15)
+createPlatform(300, 400, 300, 20)
+createPlatform(100, 300, 200, 20)
+createPlatform(400, 100, 300, 20)
     // TODO 3 - Create Collectables
 
 
