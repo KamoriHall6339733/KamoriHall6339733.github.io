@@ -1,7 +1,4 @@
-const { createRef } = require("react");
-
-$(function () {
-  // initialize canvas and context when able to
+$(function () {  // initialize canvas and context when able to
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   window.addEventListener("load", loadJson);
@@ -19,7 +16,7 @@ $(function () {
     }
 
     // Create walls - do not delete or modify this code
-    createPlatform(-45, -50, canvas.width + 100, 50); // top wall
+    createPlatform(-50, -50, canvas.width + 100, 50); // top wall
     createPlatform(-50, canvas.height - 10, canvas.width + 100, 200, "navy"); // bottom wall
     createPlatform(-50, -50, 50, canvas.height + 500); // left wall
     createPlatform(canvas.width, -50, 50, canvas.height + 100); // right wall
@@ -33,21 +30,27 @@ $(function () {
 
 
     // TODO 2 - Create Platforms
-createPlatform(200, 620, 400, 20)
-createPlatform(700, 500, 350, 15)
+    createPlatform(200, 620, 400, 20)
+    createPlatform(700, 500, 350, 15)
 createPlatform(300, 400, 300, 20)
-createPlatform(100, 300, 200, 20)
+createPlatform(700, 300, 300, 20)
 createPlatform(400, 100, 300, 20)
+createPlatform(350, 250, 200, 20)
+createPlatform(150, 200, 100, 15)
     // TODO 3 - Create Collectables
+createCollectable("steve", 550, 350)
+createCollectable("diamond", 900, 450)
+createCollectable("max", 300, 600)
 
 
-
-    
+   
     // TODO 4 - Create Cannons
+createCannon("right", 400, 750)
+createCannon("left", 500, 1150)
+createCannon("top", 500, 950) 
 
-
-    
-    
+   
+   
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
